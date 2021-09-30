@@ -1,0 +1,73 @@
+
+html{
+	color: #222;
+	font-size: 18px;
+	font-family: "Calibri";
+
+}
+.profile{
+	text-align: center;
+}
+.profile p{
+	color: #888;
+}
+img{
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+	padding: 0px;
+	margin-left: 40px;
+
+
+}
+
+
+
+h2{
+	font-size: 24px;
+	border-bottom: 1px solid #888;
+	border-top: 1px solid #888;
+	text-transform: uppercase;
+	margin-left: auto;
+
+}
+
+h3{
+	font-size: 20px;
+	border-top: 1px solid #888;	
+	border-bottom: 1px solid #888;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-transform: uppercase;
+}
+h4{
+	font-size: 20px;
+	border-bottom: 1px solid #888;
+	border-top: 1px solid #888;	
+	text-transform: uppercase;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}	
+
+
+a{
+	text-decoration: none;
+	color: inherit;;
+}
+.contact{
+	width: 200px;
+	
+}
+
+.edu{
+	margin-top: 10px;
+	margin-left: 90px;
+	width: 450px;	
+}
+.edu h4{
+text-align: center;
+}
+.edu table{
+	margin-left: 20px;
+	font-size: 21px;
+}

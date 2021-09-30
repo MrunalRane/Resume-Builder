@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Login Page</title>
+        <style>
+            #welcome{
+                display: none;
+                text-align: center;
+                font-size: 130%;
+            }
+        </style>
+        <script type="text/javascript">
+            var login_attempts = 3;
+            function check()
+            {
+            	var name = document.getElementById("userid").value;
+            	var pass = document.getElementById("password").value;
+            	if(name=="Mrunal" && pass=="Mrunal@123"){
+                    alert("SuccessFully Logged In");
+                    document.getElementById("welcome").style.display = "block";
+            		document.getElementById("userid").value="";
+            		document.getElementById("password").value="";
+            	}
+            	else{
+            		if(login_attempts==0){
+            			alert("No Login Attempts Available");
+            		}
+                    if (name==pass) {
+                        alert("Userid and Password must not be equal");
+                    }
+            		else{
+            			login_attempts = login_attempts-1;
+            			alert("Login Failed. Now Only "+login_attempts+" Login Attempts Available");
+            			if(login_attempts==0){
+            				document.getElementById("userid").disabled=true;
+            				document.getElementById("password").disabled=true;
+            				document.getElementById("form1").disabled=true;
+            			}
+            		}
+            	}
+            	return false;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Login Details</h1>
+            <form id="form1" action="" onsubmit="return check();" method="post">
+                <div class="formDiv">
+                    <label>User ID:</label>
+                    <input type="text" id="userid" placeholder="Enter your User name" autofocus required><br><br>
+
+                    <label>Password:</label>
+                    <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Need atleast one lower, one upper, one numeric and one symbol in the password" placeholder="Enter your password" required><br><br>
+
+                    <input type="submit" title="Press after entering valid credentials" id="submit_button" value="Login">
+                </div>
+            </form>
+            <p id="hint">Userid: Mrunal<br> Password: Mrunal@123</p>
+            <div id="welcome">
+                <h2></h2>
+            </div>
+        </div>
+    </body>
+</html>
